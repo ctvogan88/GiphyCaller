@@ -32,6 +32,11 @@ $(document).ready(function () {
     // call out the RENDER BUTTONS function and get those SPORT buttons on the page
     renderButtons();
 
+    $("#clear-box").on("click", function () {
+        console.log("clear gifs!");
+        $("#gif-holder").empty();
+      });
+
     // adds buttons to options
     $("#add-GIF").on("click", function (event) {
         event.preventDefault();
@@ -67,7 +72,7 @@ $(document).ready(function () {
         displayGIF();
     });
 
-    $(".sport").on("click", function () {
+    $("body").on("click", ".sport", function () {
         var sport = $(this).attr("data-name");
         console.log(sport);
         var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=1uCJw86559MzW2c5oRwA7y70wqFXjWej&q=" + sport + "&limit=10&offset=0&rating=R&lang=en"
@@ -101,10 +106,10 @@ $(document).ready(function () {
         });
     });
     
-  $("#gif-holder").on("click", ".gif", function () {
+  $("body").on("click", "img", function () {
     console.log("GIF button hit!");
 
-    var state = $(".gif").attr("data-state");
+    var state = $(this).attr("data-state");
 
     console.log(state);
 
@@ -117,9 +122,5 @@ $(document).ready(function () {
     }
   });
 
-  $("#clear-box").on("click", function () {
-    console.log("clear gifs!");
-    $("#gif-holder").empty();
-  });
 });
 
