@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The GIFtastik Trivia Game</title>
+    <!--skullicon-->
+    <link href="assets/images/skull.ico" rel="shortcut icon" type="image/x-icon">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Faster+One|Gochi+Hand|Pacifico|Play|Press+Start+2P|Waiting+for+the+Sunrise" rel="stylesheet">
+    <!-- Personal Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="assets/javascript/appl.js"></script>
+</head>
+
+<body>
+        <script src="assets/javascript/appl.js"></script>
+        <div class="text-center" id="welcome-text">Welcome to the GIFtastik Trivia Game</div>
+        <!--<div id="welcome-text-mirror">Welcome to the Mountain Trivia Game</div>-->
+        <div class="row">
+            <!-- Empty Column -->
+            <div class="col-lg-4"></div>
+            <!-- Start Timer/Trivia Button -->
+            <div class="col-lg-2">
+                <div id="timerDiv">
+                    <div class="btn-group timer" id="timerDiv" data-toggle="buttons">
+                        <button id="start">Start Trivia</button>
+                    </div>
+                    <div class="time-left">00:15</div>
+                </div>
+            </div>
+            <!-- CLEAR the GIFs Button -->
+            <div class="col-lg-2">
+                    <!-- Button triggers clearing the answers box -->
+                    <label for="box-clear" id="boxClearBtn"></label>
+                    <input id="clear-box" type="submit" value="Clear the GIFs">
+                    </form>
+            </div>
+            <div class="col-lg-4" id="GIF-search">
+                    <!-- Button triggers AJAX JSON query to Giphy -->
+                    <div class="btn-group timer" id="timerDiv" data-toggle="buttons">
+                        <input type="text" id="GIF-input" value="programming">
+                        <br>
+                        <label for="GIF-input" id="gifSearchBtn"></label>
+                        <input id="add-GIF" type="submit" value="Add a GIF">
+                    </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8" id="centerStage">
+                    <!-- Question & Answer box -->
+                    <div class="card">
+                        <h5 class="card-header" id="questionDiv">Question</h5>
+                        <div class="card-body" id="answer-box">
+                            <div class="answer-option" id="gif-holder"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2" id="gif-buttons"></div>
+            </div>
+        </div>
+    <!-- <footer class="fixed-bottom">
+        <p>Clayton T Vogan &copy; 2018</p>
+    </footer> -->
+</body>
+
+
+</html>
